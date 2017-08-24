@@ -1,0 +1,13 @@
+What is JIT
+
+Just-In-Time is also known as Dynamic Translation, is a compilation done during execution of program than prior to execution. 
+Most often this is consists of translation to machime code which is then executed directly but can also refer to translation to another format.
+A system implementing a jit compiler typically continuously anslyses the code being and identifies part of code where the speedup gained from 
+compilation would overweigh the overhead of compiling that code.Source code is compiled into byte code when we use the java complier.
+The byte code gets saved on the disk with file extension .class.When the program is to be run the byte is converted,using the JIT compiler 
+JITcompilation is a combination of the two traditional approaches to translation to machine code-ahead-of-the time(AOT) and interpretation
+and combines some advantages and drawbacks both.JIT causes a slight delay to a notciable delay in intial execution of an appilcation,due 
+to the time taken to load and compile the bytecode.Sometimes this delay is caleed "startup time delay". In general the more optimization JIT 
+performs,better the code it will generate,but the initial delay will increase. A JIT complier therefore has to make a tradeoff between the
+ compliation time and the quality of the code it hopes to generate.However it seems that much of the startup time is sometimes due to IO bound
+operations rather than JIT compilation. There also exist Java implementations thta combine an AOT compiler witheither a JIT complier or interpreter
